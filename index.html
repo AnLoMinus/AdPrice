@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>AdPrice – AP | מחירון פרסום דיגיטלי</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #050816;
+      color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      line-height: 1.7;
+    }
+    .wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+    }
+    .card {
+      background: radial-gradient(circle at top, #1c2541 0, #0b1020 45%, #050816 100%);
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 18px 45px rgba(0,0,0,0.6);
+      border: 1px solid rgba(255,255,255,0.07);
+      backdrop-filter: blur(12px);
+    }
+    h1, h2, h3 {
+      margin-top: 0;
+    }
+    h1 {
+      font-size: 2.1rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+      margin-top: 1.8rem;
+      border-right: 4px solid #00f5ff;
+      padding-right: 8px;
+    }
+    h3 {
+      font-size: 1.2rem;
+      margin-top: 1.2rem;
+    }
+    .tagline {
+      font-size: 1rem;
+      color: #d1f5ff;
+      margin-bottom: 8px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      background: linear-gradient(90deg,#00f5ff,#00ff95);
+      color: #021018;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0 4px;
+    }
+    .pill {
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(5, 12, 30, 0.8);
+    }
+    ul {
+      padding-right: 18px;
+    }
+    li {
+      margin-bottom: 4px;
+    }
+    .grid {
+      display: grid;
+      gap: 12px;
+    }
+    @media (min-width: 840px) {
+      .grid-2 {
+        grid-template-columns: 1.2fr 1fr;
+      }
+      .grid-3 {
+        grid-template-columns: repeat(3, minmax(0,1fr));
+      }
+    }
+    .platform-card {
+      border-radius: 16px;
+      padding: 14px 16px;
+      background: linear-gradient(145deg, rgba(255,255,255,0.06), rgba(0,0,0,0.3));
+      border: 1px solid rgba(255,255,255,0.08);
+      font-size: 0.9rem;
+    }
+    .platform-title {
+      font-weight: 700;
+      margin-bottom: 4px;
+      font-size: 0.95rem;
+    }
+    .platform-meta {
+      font-size: 0.8rem;
+      opacity: 0.85;
+      margin-bottom: 6px;
+    }
+    .mini-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 12px;
+      font-size: 0.85rem;
+      margin-bottom: 4px;
+    }
+    .mini-label {
+      opacity: 0.8;
+    }
+    .highlight-box {
+      border-radius: 16px;
+      padding: 14px 16px;
+      background: linear-gradient(135deg,#00f5ff22,#00ff9510);
+      border: 1px solid #00f5ff55;
+      font-size: 0.9rem;
+    }
+    .cta-strip {
+      margin-top: 20px;
+      padding-top: 14px;
+      border-top: 1px dashed rgba(255,255,255,0.25);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.9rem;
+    }
+    .cta-button {
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.9rem;
+      background: linear-gradient(90deg,#00f5ff,#7cff58);
+      color: #020612;
+      box-shadow: 0 12px 30px rgba(0,245,255,0.35);
+    }
+    .small-mono {
+      font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 0.78rem;
+      opacity: 0.9;
+      direction: ltr;
+      text-align: left;
+    }
+    footer {
+      margin-top: 24px;
+      font-size: 0.8rem;
+      opacity: 0.85;
+      border-top: 1px solid rgba(255,255,255,0.15);
+      padding-top: 12px;
+    }
+    .rap {
+      margin-top: 12px;
+      font-size: 0.9rem;
+      white-space: pre-line;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="card">
+
+      <!-- HERO -->
+      <span class="badge">AdPrice – AP · מחירון פרסום דיגיטלי</span>
+      <h1>💸 שקיפות מלאה בפרסום דיגיטלי – במסך אחד</h1>
+      <p class="tagline">
+        כל המספרים, כל הפלטפורמות, כל ההסבר – כדי שתוכל לקבל החלטה רגועה:
+        כמה להשקיע, איפה כדאי לפרסם, ומה באמת יוצא מהתקציב שלך.
+      </p>
+
+      <div class="pill-row">
+        <span class="pill">📊 מחירון מפורט לפי פלטפורמה</span>
+        <span class="pill">🎯 המלצות שימוש לכל סוג עסק</span>
+        <span class="pill">🤝 מתאים לפגישות עם לקוחות</span>
+        <span class="pill">🧮 חלוקה ברורה: CPM / CPC / CPL / CPA</span>
+      </div>
+
+      <!-- SECTION: למי זה מתאים -->
+      <h2>👥 למי דף המחירון הזה מתאים?</h2>
+      <ul>
+        <li>בעלי עסקים שרוצים להבין סוף־סוף כמה באמת עולה לפרסם חכם ברשת.</li>
+        <li>משווקים ופרילנסרים שרוצים להציג מחירון ברור ללקוחות בפגישה.</li>
+        <li>משרדי פרסום שרוצים מסמך מסודר לפתיחת שיחה והצעת מחיר.</li>
+        <li>כל מי שמרגיש שעד עכשיו “הייתי באפלה” לגבי עלויות פרסום דיגיטלי.</li>
+      </ul>
+
+      <!-- SECTION: סיכום מהיר -->
+      <h2>🚦 צילום מצב מהיר – איפה יקר, איפה זול, ואיפה הכי משתלם?</h2>
+      <div class="grid grid-3">
+        <div class="highlight-box">
+          <strong>🔥 הכי חזק לעסקים קטנים–בינוניים</strong>
+          <ul>
+            <li>פייסבוק + אינסטגרם – שילוב מנצח למודעות, לידים ומכירות.</li>
+            <li>רימרקטינג לקהל חם – החזר השקעה גבוה במיוחד.</li>
+          </ul>
+        </div>
+        <div class="highlight-box">
+          <strong>⚡ הכי זול בחשיפות וקליקים</strong>
+          <ul>
+            <li>טיקטוק – CPM נמוך, קהל צעיר, תוכן מהיר.</li>
+            <li>טלגרם – בניית קהילה סביב המותג שלך.</li>
+          </ul>
+        </div>
+        <div class="highlight-box">
+          <strong>🏢 מתאים ל-B2B וארגונים</strong>
+          <ul>
+            <li>לינקדאין – מנהלים, חברות הייטק, גיוס והשמה.</li>
+            <li>גוגל – מי שכבר מחפש אותך או את השירות שלך.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- SECTION: פלטפורמות -->
+      <h2>🌐 מחירונים לפי פלטפורמה – תמונת עומק</h2>
+      <p>
+        המספרים המוצגים כאן הם טווחים ריאליים, שנועדו לתת לך סדר בראש.
+        בכל פגישה אפשר לפתוח את הדף, לבחור פלטפורמה – ולהסביר ללקוח בשקט:
+        מה העלות, מה היתרון, ומה נכון למטרה שלו.
+      </p>
+
+      <div class="grid grid-3">
+        <!-- פייסבוק -->
+        <div class="platform-card">
+          <div class="platform-title">📘 פייסבוק – Facebook Ads</div>
+          <div class="platform-meta">רב־גילאי · יציב · מושלם לעסקים קטנים–בינוניים</div>
+          <div class="mini-row">
+            <span><span class="mini-label">CPM:</span> 12–32 ₪</span>
+            <span><span class="mini-label">CPC:</span> 0.30–1.40 ₪</span>
+          </div>
+          <div class="mini-row">
+            <span><span class="mini-label">CPL:</span> 8–29 ₪</span>
+            <span><span class="mini-label">CPA:</span> 18–120 ₪</span>
+          </div>
+          <p>💡 מעולה ללידים, חשיפה מקומית ומבצעים.</p>
+        </div>
+
+        <!-- אינסטגרם -->
+        <div class="platform-card">
+          <div class="platform-title">📸 אינסטגרם – Instagram Ads</div>
+          <div class="platform-meta">ויזואלי · מותגים · סטוריז ורילז</div>
+          <div class="mini-row">
+            <span><span class="mini-label">CPM:</span> 14–34 ₪</span>
+            <span><span class="mini-label">CPC:</span> 0.40–1.60 ₪</span>
+          </div>
+          <div class="mini-row">
+            <span><span class="mini-label">CPL:</span> 10–32 ₪</span>
+            <span><span class="mini-label">CPA:</span> 20–130 ₪</span>
+          </div>
+          <p>💡 מותגים חזותיים – טיפוח, אופנה, עיצוב, לייף סטייל.</p>
+        </div>
+
+        <!-- טיקטוק -->
+        <div class="platform-card">
+          <div class="platform-title">🎵 טיקטוק – TikTok Ads</div>
+          <div class="platform-meta">צעיר · ויראלי · תוכן מהיר</div>
+          <div class="mini-row">
+            <span><span class="mini-label">CPM:</span> 8–20 ₪</span>
+            <span><span class="mini-label">CPC:</span> 0.20–0.80 ₪</span>
+          </div>
+          <div class="mini-row">
+            <span><span class="mini-label">CPL:</span> 5–18 ₪</span>
+            <span><span class="mini-label">CPA:</span> 12–70 ₪</span>
+          </div>
+          <p>💡 למי שמוכן לעשות קריאייטיב אמיתי ולא רק “מודעה יפה”.</p>
+        </div>
+
+        <!-- גוגל -->
+        <div class="platform-card">
+          <div class="platform-title">🔎 גוגל – Google Ads</div>
+          <div class="platform-meta">כוונת חיפוש · שירותים מקצועיים · איקומרס</div>
+          <div class="mini-row">
+            <span><span class="mini-label">CPC (חיפוש):</span> 1.50–6.50 ₪</span>
+          </div>
+          <div class="mini-row">
+            <span><span class="mini-label">CPM (תצוגה):</span> 10–28 ₪</span>
+            <span><span class="mini-label">CPV (YouTube):</span> 0.05–0.25 ₪</span>
+          </div>
+          <p>💡 מי שכבר מחפש אותך – ימצא אותך כאן.</p>
+        </div>
+
+        <!-- לינקדאין -->
+        <div class="platform-card">
+          <div class="platform-title">💼 לינקדאין – LinkedIn Ads</div>
+          <div class="platform-meta">B2B · מנהלים · חברות</div>
+          <div class="mini-row">
+            <span><span class="mini-label">CPM:</span> 30–85 ₪</span>
+            <span><span class="mini-label">CPC:</span> 4–12 ₪</span>
+          </div>
+          <div class="mini-row">
+            <span><span class="mini-label">CPL:</span> 40–180 ₪</span>
+            <span><span class="mini-label">CPA:</span> 70–300 ₪</span>
+          </div>
+          <p>💡 יקר יותר – אבל פוגעים בדיוק בקהל העסקי הנכון.</p>
+        </div>
+
+        <!-- טלגרם -->
+        <div class="platform-card">
+          <div class="platform-title">📲 טלגרם – Telegram Ads</div>
+          <div class="platform-meta">קהילות · ערוצים · נאמנות גבוהה</div>
+          <div class="mini-row">
+            <span><span class="mini-label">CPM:</span> 6–18 ₪</span>
+            <span><span class="mini-label">CPC:</span> 0.20–0.70 ₪</span>
+          </div>
+          <div class="mini-row">
+            <span><span class="mini-label">CPL (הצטרפות):</span> 3–15 ₪</span>
+            <span><span class="mini-label">CPA:</span> 10–60 ₪</span>
+          </div>
+          <p>💡 מושלם לבניית קהילה סביב תכנים, קורסים, מועדון לקוחות.</p>
+        </div>
+      </div>
+
+      <!-- SECTION: ניהול קמפיינים -->
+      <h2>🧮 איך מתמחרים ניהול קמפיינים?</h2>
+      <p>
+        מעבר למדיה עצמה (הכסף שהולך לפייסבוק/גוגל וכו׳), יש את המרכיב הכי חשוב:
+        מי מנהל את זה, כמה זמן הוא משקיע, וכמה ניסיון יש לו.
+      </p>
+
+      <div class="grid grid-3">
+        <div class="platform-card">
+          <div class="platform-title">🥉 חבילה בסיסית</div>
+          <ul>
+            <li>1–2 קמפיינים פעילים.</li>
+            <li>אופטימיזציה שבועית.</li>
+            <li>דו״ח תמציתי בסוף חודש.</li>
+          </ul>
+          <p><strong>טווח מחיר ניהול:</strong> 600–900 ₪ לחודש (לא כולל מדיה).</p>
+        </div>
+
+        <div class="platform-card">
+          <div class="platform-title">🥈 חבילה מתקדמת</div>
+          <ul>
+            <li>3–6 קמפיינים במספר פלטפורמות.</li>
+            <li>A/B טסטים לקריאייטיב וקהל.</li>
+            <li>שיחות עדכון ותכנון חודשיות.</li>
+          </ul>
+          <p><strong>טווח מחיר ניהול:</strong> 1,200–2,500 ₪ לחודש.</p>
+        </div>
+
+        <div class="platform-card">
+          <div class="platform-title">🥇 חבילת פרימיום</div>
+          <ul>
+            <li>אסטרטגיה מלאה רב־פלטפורמית.</li>
+            <li>סרטונים, משפכי מכירה, רימרקטינג חכם.</li>
+            <li>לווי שוטף וניתוחי עומק.</li>
+          </ul>
+          <p><strong>טווח מחיר ניהול:</strong> 3,000–6,000 ₪ לחודש, לפי היקף.</p>
+        </div>
+      </div>
+
+      <!-- SECTION: קריאייטיב -->
+      <h2>🎨 קריאייטיב – למה זה משנה את המחיר?</h2>
+      <p>
+        קריאייטיב טוב לא “מקשט” את המודעה – הוא מוריד לך עלויות.
+        כשמודעה מדברת נכון לקהל, ה-CPM וה-CPC יורדים, והעסק מרוויח יותר מכל שקל.
+      </p>
+      <ul>
+        <li>פוסט מעוצב: 70–200 ₪ – לפי רמת ההשקעה והקונספט.</li>
+        <li>סטוריז / רילז קצרים: 40–120 ₪ ליחידה.</li>
+        <li>סרטון מכירה קצר (עד 30 שניות): 350–650 ₪.</li>
+        <li>וידאו שיווקי מורחב: 700–1,500 ₪ לפי הפקה.</li>
+        <li>דף נחיתה מעוצב: 250–900 ₪ לפי מורכבות.</li>
+      </ul>
+
+      <!-- SECTION: איך עובדים יחד -->
+      <h2>🤝 איך עובד תהליך העבודה איתי?</h2>
+      <ol>
+        <li>📂 אפיון מהיר: מבינים את העסק, המוצר והקהל.</li>
+        <li>🎯 בחירת פלטפורמות: איפה נכון להשקיע לפי המטרה.</li>
+        <li>🎨 בניית קריאייטיב: מסרים, עיצובים, וידאו לפי תקציב.</li>
+        <li>🚀 עלייה לאוויר: קמפיינים מתחילים לרוץ.</li>
+        <li>📊 אופטימיזציה: שיפור מתמשך לפי תוצאות אמיתיות.</li>
+      </ol>
+
+      <!-- SECTION: למה דווקא AdPrice – AP -->
+      <h2>💡 למה להשתמש בדף הזה מול לקוחות?</h2>
+      <ul>
+        <li>נותן ללקוח תחושת ביטחון – הכול פתוח ושקוף.</li>
+        <li>עוזר לך להסביר מספרים בלי להסתבך בניסוחים.</li>
+        <li>יוצר מראה מקצועי – אתה מגיע מוכן, עם נתונים ביד.</li>
+        <li>מאפשר להציע כמה מסלולים בצורה ברורה ומכובדת.</li>
+      </ul>
+
+      <!-- CTA -->
+      <div class="cta-strip">
+        <div>
+          ✉ רוצה להתאים את המספרים לעסק ספציפי?  
+          <strong>פשוט מסמנים יחד כאן בדף, ומבנים הצעת מחיר במקום.</strong>
+        </div>
+        <button class="cta-button">
+          📲 קביעת שיחת התאמה
+        </button>
+      </div>
+
+      <!-- טכני / קרדיטים / מאגרים -->
+      <h2>🧾 פרטים טכניים וקרדיטים</h2>
+      <p>
+        המספרים המוצגים כאן הם טווחי עבודה מקובלים בשוק, שנועדו לתת סדר
+        ושקיפות בשיחה מול לקוחות. בפועל, כל עסק מקבל התאמה אישית לפי תחום,
+        תחרות, תקציב, רמת קריאייטיב ומטרות.
+      </p>
+
+      <p class="small-mono">
+        Repo (מוצע):<br />
+        https://github.com/AnLoMinus/AdPrice<br />
+        Live Page (מוצע):<br />
+        https://anlominus.github.io/AdPrice/
+      </p>
+
+      <footer>
+        <div><strong>קרדיטים:</strong> © AnLoMinus · AdPrice – AP</div>
+        <div>עיצוב, תוכן ומבנה: AnLoMinus × ChatVision Studio</div>
+
+        <div style="margin-top:10px;">
+          <strong>פסוק חיזוק:</strong><br />
+          ״וְהוּא יִתֵּן לְךָ מִשְׁאַלוֹת לִבֶּךָ״ (תהילים ל״ז)
+        </div>
+
+        <div class="rap">
+          🎤 פזמון ראפ – AdPrice Flow:<br />
+          התקציב על הקו – והמספרים מסתדרים 💸<br />
+          כל פלטפורמה רוקדת – כשהנתונים מדברים ⚡<br />
+          מהליד עד העסקה – עוד ניצחון נרשם 📈<br />
+          AnLoMinus בזירה – הפרסום הופך זהב נושם ✨
+        </div>
+
+        <div style="margin-top:6px;">
+          מספר המידות: <strong>8</strong>
+        </div>
+      </footer>
+
+    </div>
+  </div>
+</body>
+</html>
