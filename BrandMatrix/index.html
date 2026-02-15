@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BrandMatrix – Universal Branding System</title>
+    <meta name="description"
+        content="BrandMatrix – universal branding system for AnLoMinus projects: colors, typography, visuals and ready-to-use assets for all repositories." />
+
+    <!--
+    BrandMatrix – BM
+    General Branding Hub for AnLoMinus
+    Hebrew date: י״ד בכסלו תשפ״ו
+    Gregorian date: 26.11.2025
+    Time: 14:20 (Asia/Jerusalem)
+    Credits: © AnLoMinus x ChatVision Studio
+  -->
+
+    <style>
+        :root {
+            --bg-main: #050512;
+            --bg-section: #0b0b20;
+            --bg-card: #111129;
+            --primary: #a855ff;
+            /* Electric Purple */
+            --secondary: #38bdf8;
+            /* Cosmic Blue */
+            --accent: #fbbf24;
+            /* Crystal Gold */
+            --text-main: #f9fafb;
+            --text-muted: #9ca3af;
+            --border-soft: rgba(148, 163, 184, 0.35);
+            --radius-xl: 18px;
+            --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.85);
+            --glow-primary: 0 0 28px rgba(168, 85, 255, 0.55);
+        }
+
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+                "Segoe UI", sans-serif;
+            background: radial-gradient(circle at top, #1e293b 0, #020617 55%, #000 100%);
+            color: var(--text-main);
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .nav {
+            position: sticky;
+            top: 0;
+            z-index: 30;
+            backdrop-filter: blur(18px);
+            background: linear-gradient(to bottom,
+                    rgba(15, 23, 42, 0.95),
+                    rgba(15, 23, 42, 0.65),
+                    transparent);
+            border-bottom: 1px solid rgba(148, 163, 184, 0.35);
+        }
+
+        .nav-inner {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0.75rem 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+        }
+
+        .brand-mark {
+            width: 34px;
+            height: 34px;
+            border-radius: 999px;
+            background: radial-gradient(circle at 30% 20%, #fef3c7 0, #fbbf24 18%, #a855ff 45%, #0f172a 100%);
+            box-shadow:
+                0 0 20px rgba(248, 250, 252, 0.6),
+                0 0 40px rgba(168, 85, 255, 0.9);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .brand-mark::after {
+            content: "";
+            position: absolute;
+            inset: 16%;
+            border-radius: inherit;
+            border: 1px solid rgba(248, 250, 252, 0.45);
+            box-shadow: 0 0 10px rgba(248, 250, 252, 0.5);
+        }
+
+        .brand-text-main {
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+        }
+
+        .brand-text-main span:nth-child(1) {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .brand-text-main span:nth-child(2) {
+            font-size: 0.9rem;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .nav-links a {
+            padding: 0.35rem 0.75rem;
+            border-radius: 999px;
+            border: 1px solid transparent;
+            transition: all 0.18s ease-out;
+        }
+
+        .nav-links a:hover {
+            border-color: rgba(148, 163, 184, 0.65);
+            color: var(--text-main);
+            background: radial-gradient(circle at top, rgba(56, 189, 248, 0.18), transparent 65%);
+        }
+
+        .nav-cta {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            border-radius: 999px;
+            padding: 0.45rem 0.95rem;
+            font-size: 0.8rem;
+            border: 1px solid rgba(148, 163, 184, 0.45);
+            background: rgba(15, 23, 42, 0.8);
+            color: var(--text-main);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            cursor: pointer;
+            transition: all 0.18s ease-out;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            border-color: rgba(248, 250, 252, 0.85);
+            background: radial-gradient(circle at top left, #fbbf24 0, #a855ff 45%, #0f172a 100%);
+            box-shadow: var(--glow-primary);
+        }
+
+        .btn:hover {
+            transform: translateY(-1px) scale(1.01);
+            box-shadow: 0 14px 30px rgba(15, 23, 42, 0.9);
+        }
+
+        .btn span.icon {
+            font-size: 1rem;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        .section {
+            padding: 3.5rem 1.25rem;
+        }
+
+        .section-alt {
+            background: radial-gradient(circle at top, #020617 0, #020617 40%, #000 100%);
+        }
+
+        .container {
+            max-width: 1120px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            gap: 1.75rem;
+        }
+
+        @media (min-width: 900px) {
+            .hero-grid {
+                grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.1fr);
+                align-items: center;
+            }
+
+            .two-col {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .three-col {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.22rem 0.7rem;
+            border-radius: 999px;
+            border: 1px solid rgba(148, 163, 184, 0.6);
+            background: rgba(15, 23, 42, 0.9);
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            margin-bottom: 0.9rem;
+        }
+
+        .hero-badge span.dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 999px;
+            background: radial-gradient(circle, #facc15 0, #f97316 40%, #b91c1c 100%);
+            box-shadow: 0 0 10px rgba(250, 204, 21, 0.9);
+        }
+
+        .hero-title {
+            font-size: clamp(2rem, 3vw + 1rem, 3rem);
+            line-height: 1.05;
+            margin: 0 0 0.75rem;
+            letter-spacing: 0.02em;
+        }
+
+        .hero-title span.accent {
+            background: linear-gradient(to right, #fbbf24, #a855ff, #38bdf8);
+            -webkit-background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 18px rgba(168, 85, 255, 0.65);
+        }
+
+        .hero-sub {
+            margin: 0 0 1.5rem;
+            color: var(--text-muted);
+            font-size: 0.98rem;
+            max-width: 30rem;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            align-items: center;
+            margin-bottom: 1.25rem;
+        }
+
+        .hero-meta {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .hero-meta span.label {
+            padding: 0.2rem 0.6rem;
+            border-radius: 999px;
+            border: 1px dashed rgba(148, 163, 184, 0.6);
+        }
+
+        .hero-visual {
+            position: relative;
+            min-height: 260px;
+            border-radius: 24px;
+            background: radial-gradient(circle at 30% 10%, #facc15 0, #a855ff 25%, #0f172a 55%, #020617 100%);
+            box-shadow: var(--glow-primary), var(--shadow-soft);
+            padding: 1.25rem;
+            overflow: hidden;
+            border: 1px solid rgba(248, 250, 252, 0.16);
+        }
+
+        .hero-orbit {
+            position: absolute;
+            inset: 14%;
+            border-radius: 999px;
+            border: 1px dashed rgba(248, 250, 252, 0.35);
+            transform: rotate(-14deg);
+        }
+
+        .hero-orbit:nth-child(2) {
+            inset: 24%;
+            transform: rotate(18deg);
+            border-style: solid;
+            border-color: rgba(56, 189, 248, 0.35);
+        }
+
+        .hero-orbit:nth-child(3) {
+            inset: 34%;
+            transform: rotate(-32deg);
+            border-color: rgba(168, 85, 255, 0.55);
+            box-shadow: 0 0 30px rgba(129, 140, 248, 0.7);
+        }
+
+        .hero-core {
+            position: absolute;
+            inset: 40%;
+            border-radius: 24px;
+            background: radial-gradient(circle, #fefce8 0, #facc15 30%, #f97316 55%, #7c2d12 90%);
+            box-shadow:
+                0 0 40px rgba(250, 204, 21, 0.9),
+                0 0 80px rgba(59, 130, 246, 0.9);
+        }
+
+        .hero-card {
+            position: absolute;
+            bottom: 1.1rem;
+            right: 1.1rem;
+            left: 1.1rem;
+            border-radius: 18px;
+            background: rgba(15, 23, 42, 0.9);
+            border: 1px solid rgba(148, 163, 184, 0.6);
+            padding: 0.85rem 0.9rem;
+            display: flex;
+            justify-content: space-between;
+            gap: 0.75rem;
+            font-size: 0.78rem;
+            color: var(--text-muted);
+        }
+
+        .hero-card strong {
+            color: var(--text-main);
+            font-size: 0.82rem;
+        }
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.18rem 0.6rem;
+            border-radius: 999px;
+            border: 1px solid rgba(148, 163, 184, 0.6);
+            font-size: 0.75rem;
+        }
+
+        .pill-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 999px;
+            background: radial-gradient(circle, #22c55e 0, #16a34a 40%, #166534 100%);
+            box-shadow: 0 0 10px rgba(34, 197, 94, 0.9);
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            margin-bottom: 0.4rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .section-kicker {
+            font-size: 0.78rem;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.35rem;
+        }
+
+        .section-sub {
+            margin: 0 0 1.5rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            max-width: 40rem;
+        }
+
+        .card {
+            border-radius: var(--radius-xl);
+            background: linear-gradient(to bottom right, rgba(15, 23, 42, 0.98), #020617);
+            border: 1px solid var(--border-soft);
+            padding: 1.1rem 1.05rem;
+            box-shadow: var(--shadow-soft);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            inset: -60%;
+            background: radial-gradient(circle at top, rgba(168, 85, 255, 0.12), transparent 60%);
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            gap: 0.6rem;
+            align-items: center;
+            margin-bottom: 0.6rem;
+        }
+
+        .card-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.45rem;
+        }
+
+        .card-icon {
+            width: 26px;
+            height: 26px;
+            border-radius: 999px;
+            background: radial-gradient(circle at 30% 10%, #facc15 0, #a855ff 40%, #0f172a 100%);
+            box-shadow: 0 0 16px rgba(96, 165, 250, 0.8);
+        }
+
+        .card-body {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            border-radius: 999px;
+            padding: 0.15rem 0.55rem;
+            border: 1px solid rgba(148, 163, 184, 0.6);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--text-muted);
+        }
+
+        .color-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 0.8rem;
+        }
+
+        .swatch {
+            flex: 1 1 140px;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+        }
+
+        .swatch-block {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            border: 1px solid rgba(15, 23, 42, 0.9);
+            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.9);
+        }
+
+        .swatch-info {
+            font-size: 0.8rem;
+        }
+
+        .swatch-info strong {
+            display: block;
+            margin-bottom: 0.1rem;
+        }
+
+        .swatch-primary {
+            background: radial-gradient(circle at 30% 10%, #fef3c7 0, #fbbf24 20%, #a855ff 60%, #4c1d95 100%);
+        }
+
+        .swatch-secondary {
+            background: radial-gradient(circle at 20% 0, #e0f2fe 0, #38bdf8 40%, #0f172a 100%);
+        }
+
+        .swatch-accent {
+            background: radial-gradient(circle at 25% 10%, #fef9c3 0, #facc15 35%, #b45309 100%);
+        }
+
+        .swatch-bg {
+            background: radial-gradient(circle at 0 0, #1f2937 0, #020617 55%, #000 100%);
+        }
+
+        .list {
+            list-style: none;
+            padding: 0;
+            margin: 0.4rem 0 0;
+            font-size: 0.87rem;
+            color: var(--text-muted);
+        }
+
+        .list li {
+            margin-bottom: 0.25rem;
+            display: flex;
+            gap: 0.35rem;
+            align-items: flex-start;
+        }
+
+        .list li span.bullet {
+            font-size: 0.8rem;
+            margin-top: 0.1rem;
+        }
+
+        .code {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            font-size: 0.78rem;
+            background: rgba(15, 23, 42, 0.85);
+            border-radius: 12px;
+            padding: 0.6rem 0.75rem;
+            border: 1px solid rgba(148, 163, 184, 0.6);
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        .cta-banner {
+            border-radius: 24px;
+            padding: 1.4rem 1.3rem;
+            background: radial-gradient(circle at 20% 0, rgba(248, 250, 252, 0.16), transparent 55%),
+                linear-gradient(to right, rgba(56, 189, 248, 0.25), rgba(168, 85, 255, 0.35), rgba(88, 28, 135, 0.7));
+            border: 1px solid rgba(248, 250, 252, 0.55);
+            box-shadow: 0 18px 45px rgba(15, 23, 42, 0.96);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .cta-banner h3 {
+            margin: 0 0 0.35rem;
+            font-size: 1.15rem;
+        }
+
+        .cta-banner p {
+            margin: 0;
+            font-size: 0.88rem;
+            color: #e5e7eb;
+            max-width: 28rem;
+        }
+
+        footer {
+            border-top: 1px solid rgba(148, 163, 184, 0.35);
+            padding: 1.4rem 1.25rem 2rem;
+            background: radial-gradient(circle at top, #020617 0, #020617 50%, #000 100%);
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .footer-inner {
+            max-width: 1120px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.9rem;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.7rem;
+        }
+
+        .footer-links a {
+            text-decoration: underline;
+            text-decoration-style: dotted;
+            text-underline-offset: 2px;
+        }
+
+        .footer-tagline {
+            font-size: 0.78rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <!-- 🔝 Navigation -->
+        <header class="nav">
+            <div class="nav-inner">
+                <div class="brand-logo">
+                    <div class="brand-mark"></div>
+                    <div class="brand-text-main">
+                        <span>Brand Hub</span>
+                        <span>BrandMatrix · BM</span>
+                    </div>
+                </div>
+
+                <nav class="nav-links">
+                    <a href="#identity">Identity</a>
+                    <a href="#colors">Colors</a>
+                    <a href="#type">Typography</a>
+                    <a href="#usage">Usage</a>
+                    <a href="#assets">Assets</a>
+                </nav>
+
+                <div class="nav-cta">
+                    <a class="btn btn-primary" href="https://github.com/AnLoMinus/BrandMatrix" target="_blank"
+                        rel="noopener">
+                        <span class="icon">⚡</span>
+                        <span>GitHub Repo</span>
+                    </a>
+                    <a class="btn" href="#assets">
+                        <span class="icon">📁</span>
+                        <span>Brand Assets</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- 🦋 Hero -->
+            <section class="section">
+                <div class="container grid hero-grid">
+                    <div>
+                        <div class="hero-badge">
+                            <span class="dot"></span>
+                            <span>Universal Branding System for all AnLoMinus projects</span>
+                        </div>
+
+                        <h1 class="hero-title">
+                            One <span class="accent">BrandMatrix</span>
+                            for every repo, card, album and creation.
+                        </h1>
+
+                        <p class="hero-sub">
+                            Central hub for your visual identity: colors, typography, glow style,
+                            and usage rules that keep all GitHub repositories and creative projects
+                            speaking the same cosmic language.
+                        </p>
+
+                        <div class="hero-actions">
+                            <a class="btn btn-primary" href="https://anlominus.github.io/BrandMatrix/" target="_blank"
+                                rel="noopener">
+                                <span class="icon">🌐</span>
+                                <span>Open Live Site</span>
+                            </a>
+                            <a class="btn" href="#identity">
+                                <span class="icon">📘</span>
+                                <span>View Brand Guide</span>
+                            </a>
+                        </div>
+
+                        <div class="hero-meta">
+                            <span class="label">Core: Electric · Cosmic · Holy</span>
+                            <span>Updated: 26.11.2025 · י״ד בכסלו תשפ״ו</span>
+                            <span>Owner: AnLoMinus · BrandMatrix – BM</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-visual">
+                        <div class="hero-orbit"></div>
+                        <div class="hero-orbit"></div>
+                        <div class="hero-orbit"></div>
+                        <div class="hero-core"></div>
+
+                        <div class="hero-card">
+                            <div>
+                                <div class="pill">
+                                    <span class="pill-dot"></span>
+                                    <span>Brand DNA Active</span>
+                                </div>
+                                <div style="margin-top: 0.35rem;">
+                                    <strong>Signature Glow System</strong><br />
+                                    Shared palette, typography and effects for all AnLoMinus universes.
+                                </div>
+                            </div>
+                            <div style="text-align:right;">
+                                <span style="font-size:0.72rem; text-transform:uppercase; letter-spacing:0.09em;">Brand
+                                    Code</span><br />
+                                <strong>BM · 01.0</strong><br />
+                                <span style="font-size:0.72rem;">Use for: GitHub, Cards, Sites, Social.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 🧬 Identity -->
+            <section id="identity" class="section section-alt">
+                <div class="container">
+                    <div class="section-kicker">Identity · DNA</div>
+                    <h2 class="section-title">Core Brand Identity</h2>
+                    <p class="section-sub">
+                        BrandMatrix defines how every expression of the AnLoMinus universe looks and feels:
+                        from GitHub repos and 4K banners to physical card decks and posters.
+                    </p>
+
+                    <div class="grid two-col">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-title">
+                                    <div class="card-icon"></div>
+                                    Essence & Personality
+                                </div>
+                                <span class="badge">Core</span>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list">
+                                    <li><span class="bullet">✨</span><span>Holy–cosmic energy with a modern digital
+                                            edge.</span></li>
+                                    <li><span class="bullet">⚡</span><span>Powerful, uplifting, motivational and
+                                            precise.</span></li>
+                                    <li><span class="bullet">🌌</span><span>Deep, mystical, but always clear and
+                                            readable.</span></li>
+                                    <li><span class="bullet">💎</span><span>Premium feeling: gold, glow, and clean
+                                            composition.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-title">
+                                    <div class="card-icon"></div>
+                                    Visual Language
+                                </div>
+                                <span class="badge">Direction</span>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list">
+                                    <li><span class="bullet">🌠</span><span>Cosmic backgrounds, depth and layered
+                                            gradients.</span></li>
+                                    <li><span class="bullet">🔮</span><span>Electric glow around important elements and
+                                            titles.</span></li>
+                                    <li><span class="bullet">🧿</span><span>Geometric harmony: circles, orbits, frames
+                                            and cards.</span></li>
+                                    <li><span class="bullet">🚀</span><span>Everything feels like part of a connected
+                                            creative engine.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 🎨 Colors -->
+            <section id="colors" class="section">
+                <div class="container">
+                    <div class="section-kicker">Palette · Glow</div>
+                    <h2 class="section-title">Color System</h2>
+                    <p class="section-sub">
+                        Use these colors as the base for every new repository, banner, card template or website.
+                        Adjust opacity and gradients, but keep the core hues consistent.
+                    </p>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">
+                                <div class="card-icon"></div>
+                                Primary Palette
+                            </div>
+                            <span class="badge">Hex · Mood</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="color-row">
+                                <div class="swatch">
+                                    <div class="swatch-block swatch-primary"></div>
+                                    <div class="swatch-info">
+                                        <strong>Electric Purple</strong>
+                                        <span>#a855ff</span><br />
+                                        <span>Core energy, titles, callouts.</span>
+                                    </div>
+                                </div>
+
+                                <div class="swatch">
+                                    <div class="swatch-block swatch-secondary"></div>
+                                    <div class="swatch-info">
+                                        <strong>Cosmic Blue</strong>
+                                        <span>#38bdf8</span><br />
+                                        <span>Highlights, accents, links.</span>
+                                    </div>
+                                </div>
+
+                                <div class="swatch">
+                                    <div class="swatch-block swatch-accent"></div>
+                                    <div class="swatch-info">
+                                        <strong>Crystal Gold</strong>
+                                        <span>#fbbf24</span><br />
+                                        <span>Divine touch, premium details.</span>
+                                    </div>
+                                </div>
+
+                                <div class="swatch">
+                                    <div class="swatch-block swatch-bg"></div>
+                                    <div class="swatch-info">
+                                        <strong>Void Background</strong>
+                                        <span>#020617 · #000000</span><br />
+                                        <span>Deep space, main canvas.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p style="margin-top:1rem; font-size:0.86rem; color:var(--text-muted);">
+                                Rule of thumb: keep backgrounds dark and soft, and let gold, purple and blue be the
+                                light sources.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 🔤 Typography -->
+            <section id="type" class="section section-alt">
+                <div class="container">
+                    <div class="section-kicker">Fonts · Hierarchy</div>
+                    <h2 class="section-title">Typography Guide</h2>
+                    <p class="section-sub">
+                        Clear hierarchy turns complex cosmic ideas into readable, shareable content across GitHub, sites
+                        and cards.
+                    </p>
+
+                    <div class="grid two-col">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-title">
+                                    <div class="card-icon"></div>
+                                    Web & GitHub
+                                </div>
+                                <span class="badge">Digital</span>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list">
+                                    <li><span class="bullet">🪐</span><span>Headlines (H1–H2): bold, 110–140%
+                                            line-height, letter-spacing +2%.</span></li>
+                                    <li><span class="bullet">📘</span><span>Subtitles: medium weight, slightly muted
+                                            color (#e5e7eb).</span></li>
+                                    <li><span class="bullet">📄</span><span>Body: regular weight, 15–16px, color
+                                            #d1d5db.</span></li>
+                                    <li><span class="bullet">💻</span><span>Code blocks: monospace, dark background,
+                                            light border.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-title">
+                                    <div class="card-icon"></div>
+                                    Cards & Print
+                                </div>
+                                <span class="badge">Physical</span>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list">
+                                    <li><span class="bullet">🧱</span><span>Card title: big, central, high
+                                            contrast.</span></li>
+                                    <li><span class="bullet">🖋</span><span>Sub text: few lines only – keep messages
+                                            sharp.</span></li>
+                                    <li><span class="bullet">🎴</span><span>Use same fonts across all decks for
+                                            unity.</span></li>
+                                    <li><span class="bullet">✨</span><span>Add small glow or outline to titles for
+                                            holographic feel.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top:1.5rem;">
+                        <div class="code">
+                            h1.hero-title // main message, cosmic + holy<br />
+                            h2.section-title // section headers, uppercase, spaced<br />
+                            p.section-sub // explanation text, calm and readable<br />
+                            .small-note // extra info: dates, versions, credits
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 📐 Usage -->
+            <section id="usage" class="section">
+                <div class="container">
+                    <div class="section-kicker">Rules · Consistency</div>
+                    <h2 class="section-title">Brand Usage Rules</h2>
+                    <p class="section-sub">
+                        Simple rules that keep every new repository and creative product inside the same universe.
+                    </p>
+
+                    <div class="grid three-col">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-title">
+                                    <div class="card-icon"></div>
+                                    GitHub Repositories
+                                </div>
+                                <span class="badge">Code</span>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list">
+                                    <li><span class="bullet">📂</span><span>Each repo: hero image in same color
+                                            language.</span></li>
+                                    <li><span class="bullet">🧭</span><span>Use BrandMatrix colors in README badges and
+                                            headers.</span></li>
+                                    <li><span class="bullet">🔗</span><span>Footer with: © AnLoMinus · BrandMatrix style
+                                            tag.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-title">
+                                    <div class="card-icon"></div>
+                                    Cards & Decks
+                                </div>
+                                <span class="badge">Design</span>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list">
+                                    <li><span class="bullet">🎴</span><span>Keep frame style: dark edges, glowing
+                                            center.</span></li>
+                                    <li><span class="bullet">💠</span><span>Same gold/purple/glow logic for all
+                                            sets.</span></li>
+                                    <li><span class="bullet">📌</span><span>Add small “BM” mark on back or corner for
+                                            identity.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-title">
+                                    <div class="card-icon"></div>
+                                    Social & Banners
+                                </div>
+                                <span class="badge">Social</span>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list">
+                                    <li><span class="bullet">📱</span><span>Use same cosmic background family on every
+                                            banner.</span></li>
+                                    <li><span class="bullet">🕯</span><span>Always one clear focal point: title or
+                                            symbol.</span></li>
+                                    <li><span class="bullet">🚨</span><span>Never mix random bright colors outside the
+                                            palette.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- 📁 Assets -->
+            <section id="assets" class="section section-alt">
+                <div class="container">
+                    <div class="section-kicker">Downloads · Structure</div>
+                    <h2 class="section-title">Brand Assets & Repo Structure</h2>
+                    <p class="section-sub">
+                        Organize your BrandMatrix repository so every future project can re-use the same assets
+                        instantly.
+                    </p>
+
+                    <div class="card" style="margin-bottom:1.5rem;">
+                        <div class="card-header">
+                            <div class="card-title">
+                                <div class="card-icon"></div>
+                                Recommended Folder Layout
+                            </div>
+                            <span class="badge">Structure</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="code">
+                                BrandMatrix/<br />
+                                ├─ README.md // overview + philosophy<br />
+                                ├─ BRAND_GUIDE.md // this page content in markdown<br />
+                                ├─ /assets/<br />
+                                │ ├─ /logos/ // PNG, SVG, transparent main logos<br />
+                                │ ├─ /banners/ // 4K headers for GitHub + social<br />
+                                │ ├─ /palettes/ // color references, JSON / images<br />
+                                │ └─ /templates/ // card frames, poster bases, PSD/AI<br />
+                                └─ /web/<br />
+                                └─ index.html // this GitHub Pages file
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cta-banner">
+                        <div>
+                            <h3>Ready to align your whole universe?</h3>
+                            <p>
+                                Use BrandMatrix as the first stop before launching any new repository,
+                                deck, album or website. Choose colors, typography and glow once –
+                                then re-use everywhere.
+                            </p>
+                        </div>
+                        <div>
+                            <a class="btn btn-primary" href="https://github.com/AnLoMinus/BrandMatrix" target="_blank"
+                                rel="noopener">
+                                <span class="icon">💾</span>
+                                <span>Clone BrandMatrix</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- 🔚 Footer -->
+        <footer>
+            <div class="footer-inner">
+                <div class="footer-tagline">
+                    © AnLoMinus · BrandMatrix – BM · Powered by the AnLoMinus Creative Engine.
+                    <br />
+                    Date: 26.11.2025 · י״ד בכסלו תשפ״ו · Time: 14:20 (Asia/Jerusalem)
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/AnLoMinus/BrandMatrix" target="_blank" rel="noopener">GitHub Repo</a>
+                    <a href="https://anlominus.github.io/BrandMatrix/" target="_blank" rel="noopener">Live Site</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
